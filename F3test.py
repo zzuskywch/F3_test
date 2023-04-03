@@ -1,43 +1,19 @@
+#python F3_test.py target popu1 num
 import os
 from sys import argv
 popu1=argv[2]
 target=argv[1]
 fuhao=1
+#num>0  ascending, num<0 Descending
 if '-' in argv[3]:
-
-        infile=open('/home/wangchenghu/somepy/002.han_taiwan/qp3pop/002.logfile3.r.sort','r')
+        infile=open('logfile','r')
 #       order=""
-#002.logfile3.r.sort' 是Guangdongs 而logfile3.r.zhenghao.sort是gdsouth
         outfile1=open('target_'+target+'.-'+popu1+'.rscript','w')
         outfile=open('target_'+target+'.-'+popu1+'.rfile','w')
         fuhao=-1
 else:
-        infile=open('/home/wangchenghu/somepy/002.han_taiwan/qp3pop/002.logfile3.r.zhenghao.sort','r')
-import os
-from sys import argv
-popu1=argv[2]
-target=argv[1]
-fuhao=1
-if '-' in argv[3]:
-
-        infile=open('/home/wangchenghu/somepy/002.han_taiwan/qp3pop/002.logfile3.r.sort','r')
-#       order=""
-#002.logfile3.r.sort' 是Guangdongs 而logfile3.r.zhenghao.sort是gdsouth
-        outfile1=open('target_'+target+'.-'+popu1+'.rscript','w')
-        outfile=open('target_'+target+'.-'+popu1+'.rfile','w')
-        fuhao=-1
-else:
-        infile=open('/home/wangchenghu/somepy/002.han_taiwan/qp3pop/002.logfile3.r.zhenghao.sort','r')
-        outfile=open('target_'+target+'.'+popu1+'.rfile','w')
-        outfile1=open('target_'+target+'.'+popu1+'.rscript','w')
-        fuhao=1
-#       order="-"
-##logfile4 he 4.1  target那一列  不对劲
-popu1=argv[2]
-target=argv[1]
-#zhi=float(argv[3][1:])
+        infile=open('logfile.ascending','r')  
 count=0
-
 #outfile=open('target_'+target+'.'+popu1+'.rfile','w')
 #infile=open('/picb/humpopg-bigdata5/wangchenghu/converge.han_taiwan/002.qp3test/rfile/'+target+'.target','r')
 for line in infile:
